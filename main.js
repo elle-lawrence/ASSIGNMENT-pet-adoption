@@ -210,3 +210,40 @@ const pets = [
       imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
     }
   ];
+ 
+ const catsBtn = document.getElementsByClassName("btn btn-outline-success-cats")
+ const dogsBtn = document.getElementsByClassName("btn btn-outline-success-dogs")
+ const dinoBtn = document.getElementsByClassName("btn btn-outline-success-dinos")
+ 
+ 
+  // ${pets[index].imageUrl} 
+ 
+pets.forEach( (pet, index) => {
+  const card = `<div class="card" style="width: 18rem;">
+  <h5 class="card-title">${pets[index].name}</h5>
+  <section class="image">
+  <img class="card-img-top" src="http://kittentoob.com/wp-content/uploads/2015/06/funny-cat-with-a-towel.jpg" alt="Card image cap">
+  </section>
+  <div class="card-body">
+    <p class="card-text">${pets[index].color}</p>
+    <p class="card-text">${pets[index].specialSkill}</p>  
+  </div>
+  <ul class="list-group list-group-flush">
+  </ul>
+  <div class="card-footer">
+    <a href="#" class="card-link">${pets[index].type}</a>
+  </div>
+</div>`
+  const newCard = document.createElement('div');
+  newCard.innerHTML = card;
+  document.getElementById("card-container").appendChild(newCard.firstChild);
+})
+
+catsBtn.addEventListener("click", function(){
+  console.log("click")
+})
+
+dogsBtn.addEventListener("click", function(){
+  console.log("hi");
+}) 
+

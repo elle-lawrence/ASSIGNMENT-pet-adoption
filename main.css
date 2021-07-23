@@ -1,0 +1,73 @@
+body {
+    background-color: rgb(219, 179, 186);
+    
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-outline-success-cats{
+    background-color: rgb(241, 145, 134);
+    margin: 20px;
+}
+
+.btn-outline-success-dogs {
+    background-color: rgb(211, 142, 142);
+    margin: 20px;
+}
+
+.btn-outline-success-dinos{
+    background-color: rgb(167, 202, 199);
+    margin: 20px;
+}
+
+.btn-link {
+    color: seashell;
+}
+
+#card-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h5.card-title {
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+}
+
+.card-text {
+    text-align: center;
+}
+
+div.card-body {
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.card {
+    margin: 20px;
+    flex-basis: 23%;
+    flex-grow: 1;
+}
+
+.image {
+    padding: 20px;
+}
+
+img {
+    padding: 10px;
+    border: thistle solid 1px;
+}
+
+.card-footer {
+    text-align: center;
+    background-color: rgb(221, 168, 175);
+}
+
+.card-link {
+    color: white;
+}
