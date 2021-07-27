@@ -211,40 +211,62 @@ const pets = [
     }
   ];
  
- const catsBtn = document.querySelector(".catsBtn")
- const dogsBtn = document.querySelector(".dogsBtn")
- const dinoBtn = document.querySelector(".dinosBtn")
+ const catsBtn = document.querySelector("#catsBtn")
+ const dogsBtn = document.querySelector("#dogsBtn")
+ const dinoBtn = document.querySelector("#dinoBtn")
+ const clearBtn = document.querySelector("#clearBtn")
  
+//   // ${pets[index].imageUrl} 
  
-  // ${pets[index].imageUrl} 
- 
-pets.forEach( (pet, index) => {
-  const petCards= []
-  const card = `<div class="card" style="width: 18rem;">
-  <h5 class="card-title">${pets[index].name}</h5>
-  <section class="image">
-  <img class="card-img-top" src="http://kittentoob.com/wp-content/uploads/2015/06/funny-cat-with-a-towel.jpg" alt="Card image cap">
-  </section>
-  <div class="card-body">
-    <p class="card-text">${pets[index].color}</p>
-    <p class="card-text">${pets[index].specialSkill}</p>  
-  </div>
-  <ul class="list-group list-group-flush">
-  </ul>
-  <div class="card-footer">
-    <a href="#" class="card-link">${pets[index].type}</a>
-  </div>
-</div>`
-  const newCard = document.createElement('div');
-  newCard.innerHTML = card;
-  document.getElementById("card-container").appendChild(newCard.firstChild);
-})
+
+const petCardBuilder = (petArray) => {
+  let domString = "";
+  petArray.forEach((petObj) => {
+    domString += 
+    `<div class="card" style="width: 18rem;">
+    <h5 class="card-title">${petObj.name}</h5>
+    <section class="image">
+    <img class="card-img-top" src="http://kittentoob.com/wp-content/uploads/2015/06/funny-cat-with-a-towel.jpg" alt="Card image cap">
+    </section>
+    <div class="card-body">
+      <p class="card-text">${petObj.color}</p>
+      <p class="card-text">${petObj.specialSkill}</p>  
+    </div>
+    <ul class="list-group list-group-flush">
+    </ul>
+    <div class="card-footer">
+      <a href="#" class="card-link">${petObj.type}</a>
+    </div>
+  </div>`
+  })
+let putOnDom = document.querySelector(".allCards")
+putOnDom.innerHTML = domString
+
+};
+
+petCardBuilder(pets)
+
+const petFilter = (array, type) => {
+  return array.filter(petObj => petObj.type === type);
+};
+
 
 catsBtn.addEventListener("click", function(){
-  console.log("click")
+  const catsFilter = petFilter(pets, "cat")
+  petCardBuilder(catsFilter)
 })
 
 dogsBtn.addEventListener("click", function(){
-  console.log("hi");
-}) 
+  const dogsFilter = petFilter(pets, "dog")
+  petCardBuilder(dogsFilter)
+})
 
+dinoBtn.addEventListener("click", function(){
+  const dinoFilter = petFilter(pets, "dino")
+  petCardBuilder(dinoFilter)
+})
+
+clearBtn.addEventListener("click", function(){
+  const clearFilter = pets
+  petCardBuilder(clearFilter)
+})
