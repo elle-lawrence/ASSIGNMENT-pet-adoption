@@ -6,25 +6,52 @@ body {
 header {
     display: flex;
     justify-content: center;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 100px;
+    flex-basis: 28%;
+    flex-grow: 1;
 }
 
 .btn-outline-success-cats{
-    background-color: rgb(241, 145, 134);
     margin: 20px;
+    font-size: 50px;
+    box-shadow: 10px 5px 5px rgb(182, 156, 153);
+    border: solid 5px rgb(241, 145, 134);
+    border-radius: 10px;
+    color: rgb(241, 145, 134);
+    height: 100px;
+    width: 300px;
 }
 
 .btn-outline-success-dogs {
-    background-color: rgb(211, 142, 142);
     margin: 20px;
+    font-size: 50px;
+    box-shadow: 10px 5px 5px rgb(182, 156, 153);
+    border: solid 5px rgb(211, 142, 142);
+    border-radius: 10px;
+    color: rgb(211, 142, 142);
+    height: 100px;
+    width: 300px;
 }
 
 .btn-outline-success-dinos{
-    background-color: rgb(167, 202, 199);
     margin: 20px;
+    font-size: 50px;
+    box-shadow: 10px 5px 5px rgb(182, 156, 153);
+    border: solid 5px rgb(126, 190, 185);
+    border-radius: 10px;
+    color: rgb(126, 190, 185);
+    height: 100px;
+    width: 300px;
 }
 
 .btn-link {
     color: seashell;
+    font-size: 50px;
+}
+
+.btn-link:hover {
+    color: rgb(241, 145, 134);
 }
 
 #card-container{
@@ -32,14 +59,22 @@ header {
     flex-wrap: wrap;
 }
 
+
 h5.card-title {
     text-align: center;
     padding: 10px;
-    margin: 0px;
+    margin-top: 20px;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 40px;
+}
+.card-img-top {
+    border-radius: 50%;
+    padding: 10px;
 }
 
 .card-text {
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 div.card-body {
@@ -58,11 +93,6 @@ div.card-body {
     padding: 20px;
 }
 
-img {
-    padding: 10px;
-    border: thistle solid 1px;
-}
-
 .card-footer {
     text-align: center;
     background-color: rgb(221, 168, 175);
@@ -70,4 +100,40 @@ img {
 
 .card-link {
     color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+#dog-pet-type .card-footer {
+    background-color: rgb(211, 142, 142);
+}
+
+#dog-pet-type h5.card-title {
+    color:rgb(211, 142, 142)
+}
+
+#dog-pet-type .card-img-top {
+    border:solid 2px rgb(211, 142, 142);
+}
+
+#cat-pet-type .card-footer {
+    background-color: rgb(241, 145, 134);
+}
+
+#cat-pet-type h5.card-title {
+    color:rgb(241, 145, 134)
+}
+
+#cat-pet-type .card-img-top{
+    border:solid 2px rgb(241, 145, 134);
+}
+
+#dino-pet-type .card-footer {
+    background-color: rgb(126, 190, 185);
+}
+
+#dino-pet-type h5.card-title {
+    color: rgb(126, 190, 185);
+}
+
+#dino-pet-type .card-img-top {
+    border: solid 2px rgb(126, 190, 185);
 }

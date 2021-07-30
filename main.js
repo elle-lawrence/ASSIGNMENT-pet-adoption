@@ -1,3 +1,6 @@
+// FIRST ATTEMPT< REFACTORED ON MAIN1.JS
+
+
 const pets = [
     {
       name: "Dusty",
